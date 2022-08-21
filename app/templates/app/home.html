@@ -1,0 +1,381 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+<!--Banner Slider-->
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</a>
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b28.jpg' %}" class="d-block w-100" alt="..."> 
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b22.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b23.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b24.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+ 
+</div>
+
+{% block css %}
+ <style>
+          .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+
+          .col-md-3 img{
+
+          width: 170px;
+          height: 200px;
+          }
+
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+
+          body .carousel-indicators{
+          bottom: 0;
+          }
+
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          background-color: blue;
+          }
+
+          .carousel-control-prev,
+          .carousel-control-next{
+          top: auto;
+          bottom: auto;
+          padding-top: 222px;
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           }
+  </style>
+ {% endblock %}
+
+
+{% endblock banner_slider %}
+<!-- End Banner Slider -->
+{% block livesale %}
+<div class="container" >
+  <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+    <h1> Quick about our Comapny</h1>
+    <span>Your Product our Resposibility</span>
+    <small class="fw-lighter"> </small>
+  </div>
+</div>
+<div class="py-5 service-26">
+  <div class="container">
+      <div class="row wrap-service-26">
+          <div class="col-md-7 align-self-center">
+              <div class="max-box"> 
+                  <span class="badge badge-info rounded-pill px-3 py-1 font-weight-light">Service 26</span>
+                  <h3 class="mt-3">Thousands of Great inbuld Elements to make your life easier </h3>
+                  <p class="mt-3">You can relay on our amazing features list and also our customer services will be greatexperience for you without doubt and in no-time and with great quality for design.</p>
+                  <p>We guarantee you with our WrapKit that you will make your site in record time and it will be fun to work on.</p>
+                  <a href="javascript:void(0)" class="linking">Learn More</a>
+              </div>
+          </div>
+          <div class="col-md-5 col-md-5"> 
+            <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/features/feature26/img1.jpg" class="img-fluid" /> 
+          </div>
+      </div>
+      <div class="row wrap-service-26 mt-4 pt-3">
+          <div class="col-md-6"> 
+            <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/features/feature26/img2.jpg" class="img-fluid" /> 
+          </div>
+          <div class="col-md-6 align-self-center">
+              <span class="badge badge-info rounded-pill px-3 py-1 font-weight-light">Service 26</span>
+              <h3 class="mt-3">Get the best Produts to make your Life Modern</h3>
+              <p class="mt-3">You can relay on our amazing features list and also our customer services will be greatexperience for you without doubt and in no-time and with great quality for design.</p>
+              <p>We guarantee you with our WrapKit that you will make your site in record time and it will be fun to work on.</p>
+              <a class="linking" href="javascript:void(0)">Learn More</a>
+          </div>
+      </div>
+  </div>
+</div> 
+<!-- Live Sale Section -->
+
+<div class="container" >
+  <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+    <h1>SALE IS LIVE NOW</h1>
+    <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
+    <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
+  </div>
+</div> 
+
+
+{% endblock livesale %}
+<!-- End Live Sale Section -->
+
+{% block main-content %}
+<!-- 1st Product Slider -->
+
+
+
+
+{% block body %}
+
+
+{% load static %}
+<div class="container">
+  <!--Slideshow starts here -->
+  {% for product, range, nSlides in allProds %}
+  <h5 class="my-4">Flash Sale On {{product.0.category}} - Recommended Items</h5>
+  <div class="row">
+      <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
+          <ul class="carousel-indicators">
+              <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+              {% for i in range %}
+              <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+              {% endfor %}
+          </ul>
+          <div class="container carousel-inner no-padding">
+              <div class="carousel-item active">
+                  {% for i in product %}
+                  <div class="col-xs-3 col-sm-3 col-md-3">
+                      <div class="card align-items-center" style="width: 18rem;">
+                          <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name}}</h5>
+                              <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
+                              <span id="divpr{{i.id}}" class="divpr">
+                                  <button id="pr{{i.id}}" class="btn btn-primary cart">Add To Cart</button>
+                              </span>
+                              <a href="/products/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">QuickView</button></a>
+                          </div>
+                      </div>
+                  </div>
+                  {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+              </div>
+              <div class="carousel-item">
+                  {% endif %}
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+      <!-- left and right controls for the slide -->
+      <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+ 
+
+ 
+
+
+
+<!-- End 1st Product Slider -->
+
+<!-- Payment Info Section -->
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+     <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- End Payment Info Section -->
+<div class="main">
+  <div class="profile-card">
+    <div class="img">
+      <img src="static/app/images/1.jpg">
+    </div>
+    <div class="caption">
+
+      <br>
+      <h3>Sainath kadam</h3>
+      <p>Entrepreneur/ Developer/Youtuber/</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      
+    
+    </div>
+    
+   
+ 
+  </div>
+  <h1> Message from Desk </h1>
+  <p>  </P>
+ 
+ 
+ </div>
+
+
+
+
+<div class="services pd">
+  <div class="container">
+    <h3 class="title">Services</h3>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="square"><i class="fas fa-code"></i></div>
+        <div class="serv">
+          <h5>Quality</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="serv">
+          <div class="square"><i class="fas fa-cogs"></i></div>
+          <h5>Product variety</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="square"><i class="fas fa-globe"></i></div>
+        <div class="serv">
+          <h5>Cash on delivary</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="square"><i class="fas fa-user-shield"></i></div>
+        <div class="serv">
+          <h5>Fair Price</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock main-content %}
+{% block js %}
+<script>
+  // Find out the cart items from localStorage
+  if (localStorage.getItem('cart') == null) {
+      var cart = {};
+  } else {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      updateCart(cart);
+  }
+  // If the add to cart button is clicked, add/increment the item
+  //$('.cart').click(function() {
+  $('.divpr').on('click', 'button.cart', function() {
+      var idstr = this.id.toString();
+      if (cart[idstr] != undefined) {
+        qty = cart[idstr][0] + 1;
+          
+      } else {
+          qty = 1;
+          name = document.getElementById('name'+idstr).innerHTML
+          cart[idstr] = [qty, name];
+  
+      }
+      updateCart(cart);
+  });
+  //Add Popover to cart
+  $('#popcart').popover();
+  updatePopover(cart);
+  
+  function updatePopover(cart) {
+      console.log('We are inside updatePopover');
+      var popStr = "";
+      popStr = popStr + "<h5> Cart for your items in my shopping cart </h5><div class='mx-2 my-2'>";
+      var i = 1;
+      for (var item in cart) {
+          popStr = popStr + "<b>" + i + "</b>. ";
+          popStr = popStr + document.getElementById('name' + item).innerHTML.slice(0, 19) + "... Qty: " + cart[item][0] + '<br>';
+          i = i + 1;
+      }
+      popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-primary' id ='checkout'>Checkout</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>Clear Cart</button>     "
+      console.log(popStr);
+      document.getElementById('popcart').setAttribute('data-content', popStr);
+      $('#popcart').popover('show');
+  }
+  
+  function clearCart() {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      for (var item in cart) {
+          document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="btn btn-primary cart">Add To Cart</button>'
+      }
+      localStorage.clear();
+      cart = {};
+      updateCart(cart);
+  }
+  
+  function updateCart(cart) {
+      var sum = 0;
+      for (var item in cart) {
+          sum = sum + cart[item][0];
+          document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-primary minus'>-</button> <span id='val" + item + "''>" + cart[item][0] + "</span> <button id='plus" + item + "' class='btn btn-primary plus'> + </button>";
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      document.getElementById('cart').innerHTML = sum;
+      console.log(cart);
+      updatePopover(cart);
+  }
+  // If plus or minus button is clicked, change the cart as well as the display value
+  $('.divpr').on("click", "button.minus", function() {
+      a = this.id.slice(7, );
+      cart['pr' + a][0] = cart['pr' + a][0] - 1;
+      cart['pr' + a][0] = Math.max(0, cart['pr' + a][0]);
+      document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0];
+      updateCart(cart);
+  });
+  $('.divpr').on("click", "button.plus", function() {
+      a = this.id.slice(6, );
+      cart['pr' + a][0] = cart['pr' + a][0] + 1;
+      document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0];
+      updateCart(cart);
+  });
+  </script>
+  
+{% endblock %}

@@ -1,0 +1,301 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Connections{% endblock title %}
+{% block main-content %}
+ <!-- Site Icons -->
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+ <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+
+    
+ <!-- Site CSS -->
+
+ <link rel="stylesheet" href="{% static 'app/css/connection.css' %}">  
+<div class="about-section-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="{% static 'app/images/map4.jpg' %}" alt="" srcset="" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="inner-column">
+                    <h1>Our Best <span>Connections</span></h1>
+                    <h4>Little Story</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+                    <p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
+                    {% comment %} <a class="btn btn-lg btn-circle btn-outline-new-white" href="#">More</a> {% endcomment %}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="inner-pt">
+                    <p>Sed tincidunt, neque at egestas imperdiet, nulla sapien blandit nunc, sit amet pulvinar orci nibh ut massa. Proin nec lectus sed nunc placerat semper. Duis hendrerit elit nec sapien porttitor, ut pretium ipsum feugiat. Aenean volutpat porta nisi in gravida. Curabitur pulvinar ligula sed facilisis bibendum. Nullam vitae nulla elit. </p>
+                    <p>Integer purus velit, eleifend eu magna volutpat, porttitor blandit lectus. Aenean risus odio, efficitur quis erat eget, mattis tristique arcu. Fusce in ante enim. Integer consectetur elit nec laoreet rutrum. Mauris porta turpis nec tellus accumsan pellentesque. Morbi non quam tempus, convallis urna in, cursus mauris. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+
+<!-- Start Menu -->
+<div class="menu-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="heading-title text-center">
+                    <h2>Top Connected Shop</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="special-menu text-center">
+                    <div class="button-group filter-button-group">
+                        <button class="active" data-filter="*">All</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="row special-list">
+            <div class="col-lg-4 col-md-6 special-grid drinks">
+                <div class="gallery-single fix">
+                    <img src="images/img-01.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>shop1</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $7.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid drinks">
+                <div class="gallery-single fix">
+                    <img src="images/img-02.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 2</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $9.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid drinks">
+                <div class="gallery-single fix">
+                    <img src="images/img-03.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 3</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $10.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid lunch">
+                <div class="gallery-single fix">
+                    <img src="images/img-04.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 3</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $15.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid lunch">
+                <div class="gallery-single fix">
+                    <img src="images/img-05.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 4</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $18.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid lunch">
+                <div class="gallery-single fix">
+                    <img src="images/img-06.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 5</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $20.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/img-07.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 6</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $25.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/img-08.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Dinner 2</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/img-09.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 7</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $24.79</h5>
+                    </div>
+                </div>
+                <div class="button-group filter-button-group">
+                    <button class="active" data-filter="services.html"> People </button>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed1.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Shop 8</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed2.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room 2</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed3.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room3</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed4.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room4</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed5.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room5</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed6.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room6</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed7.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room7</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed8.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room8</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/bed9.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Special Room9</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+                <div class="button-group filter-button-group">
+                    <button class="active" data-filter="services.html"> Supporter </button>
+                    
+                </div>
+                
+            
+
+            </div>
+            
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/swm1.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Swimming pool</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/swm2.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Swimming pool</h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 special-grid dinner">
+                <div class="gallery-single fix">
+                    <img src="images/swm3.jpg" class="img-fluid" alt="Image">
+                    <div class="why-text">
+                        <h4>Swimming pool </h4>
+                        <p>Sed id magna vitae eros sagittis euismod.</p>
+                        <h5> $22.79</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+    
+        
+    </div>
+</div>
+{% endblock main-content %}
